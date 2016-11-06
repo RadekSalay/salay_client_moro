@@ -32,7 +32,7 @@ public class ReserveController {
 
     @RequestMapping("/")
     public String index() {
-        return "redirect: reserveForm";
+        return "redirect:reserve";
     }
 
     @RequestMapping(value = "/reserve", method = RequestMethod.GET)
@@ -73,6 +73,6 @@ public class ReserveController {
             log.error("Error with ticket " + ticket.toString() + " " + new Date().toString(), e);
             model.addAttribute("result", "When we sent a ticket, an error occurred");
         }
-        return "redirect: result";
+        return "redirect:result";
     }
 }
